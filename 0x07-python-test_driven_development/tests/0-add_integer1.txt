@@ -1,0 +1,30 @@
+The ``0-add_integer`` module
+
+Importing the module into environment
+>>> add_integer = __import__('0-add_integer').add_integer   
+
+
+Now testing the function with two integer values
+>>> add_integer(10,10)
+20
+
+Testing with only one value since second value is a keyword arg
+>>> add_integer(0)
+98
+
+>>> add_integer(2)
+100
+
+Raise exception when the wrong type is used as function argument
+
+>>> add_integer(1
+0,'4')
+Traceback (most recent call last):
+  ...
+TypeError: b must be an integer
+
+
+>>> add_integer('')
+Traceback (most recent call last):
+  ...
+TypeError: a must be an integer

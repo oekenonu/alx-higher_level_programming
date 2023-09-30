@@ -1,0 +1,20 @@
+The ``example`` module
+======================
+Using ``factorial``
+
+This is an example text file
+    >>> from example import factorial
+
+Now to use it:
+    >>> factorial(6)
+    720
+
+    >>> factorial (2)
+    2
+
+
+    >>> 4
+    4
+
+    >>> sum([1,1])
+    2
