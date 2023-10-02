@@ -1,18 +1,18 @@
 #!/usr/bin/python3
+""" Define a Rectangle class """
+
 
 class Rectangle:
     """ Represents a rectangle """
 
     def __init__(self, width=0, height=0):
-        """ 
+        """
         Initialize the rectangle
 
         Args:
             width (int): the width of the rectangle
             height (int): the height of the rectangle
         """
-        self.__width = 0
-        self.__height = 0
         self.width = width
         self.height = height
 
@@ -32,7 +32,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """ get height of rectangle """
+        """ return the height of the rectangle """
         return self.__height
 
     @height.setter
