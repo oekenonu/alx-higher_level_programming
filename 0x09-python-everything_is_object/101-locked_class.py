@@ -13,4 +13,4 @@ class LockedClass:
             super().__setattr__(attr, value)
         else:
             raise AttributeError("'LockedClass' object has no
-                                 attribute '{}'".format(attr))i
+                                 attribute '{}'".format(attr))
