@@ -1,0 +1,46 @@
+Prints full name
+================
+
+Test for function that takes firstname & lastname and return fullname
+
+Usage
+=====
+
+``say_my_name(first_name, last_name)`` returns My name is ``<first name> <last name>``
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> print(say_my_name("Janet", "Jackson"))
+    My name is Janet Jackson
+
+::
+
+    >>> print(say_my_name("Bruce", "Lee"))
+    My name is Bruce Lee
+
+::
+
+Run test for only firstname since lastname is optional
+======================================================
+
+    >>> print(say_my_name("Lincon"))
+    My name is Lincon
+
+
+Test that `firstname` parameter only accepts str type
+=====================================================
+
+    >>> print(say_my_name(1, 'Love'))
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+
+Test that `lastname` parameter only accepts str type
+====================================================
+
+    >>> print(say_my_name('Ben', 10))
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
