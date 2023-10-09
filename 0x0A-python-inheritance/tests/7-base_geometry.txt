@@ -1,0 +1,26 @@
+Test case for base geometry
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+Test the integer validator using an integer
+>>> bg.integer_validator("my_int", 12)
+
+Test using a sring
+>>> bg.integer_validator("my_int", 'r')
+Traceback (most recent call last):
+  ...
+TypeError: my_int must be an integer
+
+>>> bg.area()
+Traceback (most recent call last):
+  ...
+Exception: area() is not implemented
+
+
+>>> bg.integer_validator("my_int", -1)
+Traceback (most recent call last):
+  ...
+ValueError: my_int must be greater than 0
+
