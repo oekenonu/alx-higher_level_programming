@@ -1,0 +1,48 @@
+Test for 1-my_list.py
+=====================
+
+>>> MyList = __import__('1-my_list').MyList
+
+
+  >>> my_list = MyList()
+  >>> my_list.append(2)
+  >>> my_list.append(3)
+  >>> my_list.append(5)
+  >>> my_list.append(4)
+  >>> my_list.append(1)
+  >>> print(my_list)
+  [2, 3, 5, 4, 1]
+
+  >>> my_list.print_sorted()
+  [1, 2, 3, 4, 5]
+
+  >>> print(my_list)
+  [2, 3, 5, 4, 1]
+
+
+
+Case for when a list is passed directly
+
+>>> a = [1, 9, 4]
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[1, 4, 9]
+
+Case for an empty list
+
+>>> a = []
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[]
+
+
+Case for a single number
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1]
+>>> print(my_list)
+[1]
+
+
