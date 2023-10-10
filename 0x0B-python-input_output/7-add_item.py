@@ -11,5 +11,4 @@ except FileNotFoundError:
     items = []
 
 args = sys.argv[1:]
-print(args)
 save_to_json_file(items, "add_item.json")
