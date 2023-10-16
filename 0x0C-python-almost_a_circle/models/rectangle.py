@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Module that uses the Base class"""
-from models.base import Base 
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -29,7 +29,7 @@ class Rectangle(Base):
     def width(self, width):
         if type(width) is not int:
             raise TypeError("width must be an integer")
-        if width <=0:
+        if width <= 0:
             raise ValueError("width must be > 0")
         self.__width = width
 
@@ -39,7 +39,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
-        if type(height) is not int: 
+        if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
             raise ValueError("height must be > 0")
@@ -60,7 +60,7 @@ class Rectangle(Base):
     @property
     def y(self):
         return __y
-    
+
     @y.setter
     def y(self, y):
         if type(y) is not int:
@@ -68,3 +68,7 @@ class Rectangle(Base):
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
+
+    def area(self):
+        """Calculate the area of the rectangle"""
+        return self.__width * self.__height
