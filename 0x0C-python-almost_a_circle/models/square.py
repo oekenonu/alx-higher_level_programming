@@ -27,6 +27,22 @@ class Square(Rectangle):
         self.width = val
         self.height = val
 
+    def update(self, *args, **kwargs):
+        """Update values using *args or **kwargs
+
+        Args:
+            *args: List of arguments in the order id, size, x, y
+            **kwargs: Keyword arguments representing attributes
+        """
+        attributes = ["id", "size", "x", "y"]
+
+        if args:
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])                                                   
+        else:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)
 
     def __str__(self):
         """Return the print() and str() representation of a Square."""
