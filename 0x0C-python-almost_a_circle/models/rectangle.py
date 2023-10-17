@@ -84,7 +84,7 @@ class Rectangle(Base):
                 print('#', end='')
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update values
         - 1st argument represents id attribute
         - 2nd argument represents width attribute
@@ -93,8 +93,21 @@ class Rectangle(Base):
         - 5th argument represents y attribute
         """
         attributes = ["id", "width", "height", "x", "y"]
-        for i in range(len(args)):
-            setattr(self, attributes[i], args[i])
+        if args:
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+        """dictionary representation function"""
+        return {
+                "id": self.id, "width": self.width,
+                "height": self.height, "x": self.x,
+                "y": self.y
+                }
 
     def __str__(self):
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} "
