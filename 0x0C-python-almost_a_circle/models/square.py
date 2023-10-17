@@ -44,6 +44,13 @@ class Square(Rectangle):
                 if key in attributes:
                     setattr(self, key, value)
 
+    def to_dictionary(self):
+        """Return dictionary representation of a square"""
+        return {
+                "id": self.id, "size": self.width,
+                "x": self.x, "y": self.y
+                }
+
     def __str__(self):
         """Return the print() and str() representation of a Square."""
         return (f"[Square] ({self.id}) {self.x}/{self.y} "
