@@ -13,7 +13,7 @@ class Square(Rectangle):
             size (int): The size of the Square
             x (int): The x coordinate of the Square
             y (int): The y coordinate of the Square
-            id (int): Identity of the Square
+            id (int): Id of the Square
         """
         super().__init__(size, size, x, y, id)
 
