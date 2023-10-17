@@ -64,7 +64,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         if type(y) is not int:
-            raise TypeError("y mut be an integer")
+            raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
@@ -111,4 +111,4 @@ class Rectangle(Base):
 
     def __str__(self):
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} "
-                "- {self.__width}/{self.__height}")
+                f"- {self.__width}/{self.__height}")
