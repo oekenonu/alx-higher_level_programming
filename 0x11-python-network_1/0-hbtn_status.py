@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Script using urllib to show url status
+""" Script using urllib to show url status """
 
 if __name__ == '__main__':
     import urllib.request
