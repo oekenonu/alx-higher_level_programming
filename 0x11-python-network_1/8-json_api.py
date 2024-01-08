@@ -12,7 +12,7 @@ if __name__ == '__main__':
         arg = sys.argv[1]
     data = dict(q=arg)
     try:
-        r = requests.post(base_url, data=arg)
+        r = requests.post(base_url, data=data)
         response = r.json()
         if response == {}:
             print('No result')
